@@ -5,24 +5,32 @@ import java.util.Scanner;
 public class sum {
 	
 	public static void main(String[] args) {
-		//클라이언트에게 두 수를 입력받고
-		//두 수의 합을 계산 후 출력한다.
-		int a,b;
+	// 입력받은 값에 최대 일 수 구하기
 		Scanner scanner = new Scanner(System.in);
+		System.out.println("달을 입력하시오 : ");
+		int num = scanner.nextInt();
 		
-		String s1,s2;
-		System.out.println("두 수를 입력하시오 :");
-		s1 = scanner.next();
-		s2 = scanner.next();
+		if(num>12) {
+			System.out.println("1~12 까지만 입력하시오");
+		}
 		
-		System.out.println(s1+","+s2);
+		int[] month = new int[12];
 		
-		a = Integer.parseInt(s1);
-		b = Integer.parseInt(s2);
-		//Integer 클래스로 a,b 자료형 변환 한다
+		for(int i = 0; i<12; i++) {
+			month[i] = i+1;
+		}
 		
-		System.out.println("두 수의 합은 :"+ (a+b));
-		scanner.close();
+		if(num==4||num==6||num==9||num==11){
+			System.out.println(num+"월은 30일 까지 있습니다.");
+		}
+		else if(num==1||num==3||num==5||num==7||num==8||num==12||num==10){
+			System.out.println(num+"월은 31일 까지 있습니다.");
+		}
+		else if(num==2){
+			System.out.println(num+"월은 28일 까지 있습니다.");
+		}
+		
+		
 	}
 
 }
