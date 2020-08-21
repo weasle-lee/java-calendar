@@ -19,7 +19,10 @@ public class sum {
 		
 		a = Integer.parseInt(s1);
 		b = Integer.parseInt(s2);
+		//Integer 클래스로 a,b 자료형 변환 한다
+		
 		System.out.println("두 수의 합은 :"+ (a+b));
+		scanner.close();
 	}
 
 }
